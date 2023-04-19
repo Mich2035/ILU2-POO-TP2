@@ -12,10 +12,10 @@ public class BoundaryEmmenager {
 	public void emmenager(String nomVisiteur) {
 		if (controlEmmenager.isHabitant(nomVisiteur)) {
 			System.out.println(
-					"Mais vous êtes déjà un habitant du village !");
+					"Mais vous êtes dejà un habitant du village !");
 		} else {
 			StringBuilder question = new StringBuilder();
-			question.append("Êtes-vous :\n");
+			question.append("êtes-vous :\n");
 			question.append("1 - un druide.\n");
 			question.append("2 - un gaulois.\n");
 			int choixUtilisateur = -1;
@@ -27,7 +27,7 @@ public class BoundaryEmmenager {
 					break;
 
 				case 2:
-					//TODO a completer
+					emmenagerGaulois(nomVisiteur);
 					break;
 
 				default:
@@ -40,6 +40,32 @@ public class BoundaryEmmenager {
 	}
 
 	private void emmenagerDruide(String nomVisiteur) {
-		//TODO a completer
+		System.out.println("Bienvenu Druide"+ nomVisiteur);
+		System.out.println("Quelle est votre force?");
+		int choixforcemin,choixforcemax;
+		do {
+		choixforcemin=Clavier.entrerEntier("Quelle est la force la plus faible que vous produisez");
+		choixforcemax=Clavier.entrerEntier("Quelle est la force la plus forte que vous produisez");
+		if(choixforcemax<choixforcemin) {
+			System.out.println("Attention,druide, vous vous êtes trompés entre le minimum et le maximum");
+		}
+		}
+		while(choixforcemin > choixforcemax) ;
+		controlEmmenager.ajouterDruide(nomVisiteur, choixforcemax, choixforcemin, choixforcemax);
+			
+		}
+	public void emmenagerGaulois(String nomVisiteur) {
+		
+		System.out.println("Bienvenu villageois"+ nomVisiteur);
+		
+		int force=Clavier.entrerEntier("Quelle est votre force ");
+		controlEmmenager.ajouterGaulois(nomVisiteur, force);
+		
+		
+		
+		
 	}
-}
+	}
+	
+	
+

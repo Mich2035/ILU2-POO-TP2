@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//src/frontiere=ISO-8859-1
+encoding//src/frontiere/BoundaryAcheterProduit.java=US-ASCII
+encoding//src/frontiere/BoundaryAfficherVillage.java=UTF-8
+encoding//src/frontiere/BoundaryEmmenager.java=UTF-8
+encoding//src/frontiere/BoundaryLeVillage.java=UTF-8
+encoding//src/frontiere/BoundaryLibererEtal.java=ISO-8859-1
+encoding//src/frontiere/BoundaryPrendreEtal.java=UTF-8
+encoding//src/histoire/Scenario.java=ISO-8859-1
+encoding/<project>=UTF-8
